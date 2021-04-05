@@ -1,0 +1,320 @@
+@media (min-width: 420px)
+	body
+		font-size: 0.8em
+	h1,h2,h3,.h2,.h3
+		// font-size: calc(18px + (32 - 18) * ((100vw - 320px) / (1230 - 320)))
+		font-size: calc(18px + 14 * ((100vw - 320px) / 910))
+@media (min-width: 420px)
+	.header
+		header
+			.socials-and-mail
+				span
+					display: block
+	.inteco
+		&-flex
+			grid-template-columns: repeat(2,1fr)
+			grid-gap: 40px
+	.main-desk
+		&-text
+			&-equipment
+				.images
+					img
+						height: 2em
+						padding: 4px 10px
+@media (min-width: 480px)
+	.header
+		header
+			.socials-and-mail
+				.socials
+					a
+						&:first-child
+							margin-right: 10px
+	.gain
+		.gain-grid
+			grid-template-columns: repeat(2,1fr)
+	.see
+		background-image: url('../img/see/background-see.png')
+		background-position: 50% 50%
+		background-size: cover
+		.h3
+			margin: 0
+			padding: 30px 0
+		&-grid
+			display: grid
+			grid-template-columns: repeat(2,1fr)
+	footer
+		.logo
+			text-align: left
+		.footer
+			&-call-us
+				display: flex
+				justify-content: space-between
+				max-width: 32em
+				align-items: center
+			&-socials
+				margin: 0 auto 0 0
+				justify-content: space-between
+				max-width: 26em
+			&-loc-time
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+				max-width: 32em
+				p
+					text-align: left
+				.time
+					transform: translateY(6px)
+// @media (min-width: 570px)
+@media (min-width: 640px)
+	.our-offers
+		&__wrapper
+			.our-offers__grid
+				grid-template-columns: repeat(2,1fr)
+				.block-big
+					.header-grid
+						.relative-img
+							height: 240px
+	.main-desk
+		&-text
+			&-equipment
+				.images
+					max-width: 35em
+@media (min-width: 768px)
+	.gain
+		.gain-grid
+			grid-template-columns: repeat(3,1fr)
+	.header
+		header
+			padding: 5px
+			button
+				border-radius: 8px
+				flex-basis: auto
+				min-width: auto
+				margin: 0
+				order: 0
+				padding: .875em 1.25em
+			.logo
+				height: 2.25em
+			.phone
+				a
+					font-size: 1.125em
+	.our-offers
+		&__wrapper
+			.our-offers__grid
+				.block-mini
+					button
+						width: 180px
+						height: 50px
+				.img-block--1
+					background-size: 150px
+				.img-block--2
+					background-size: 140px
+				.img-block--3
+					background-size: 155px
+	.standart
+		.standart-pc
+			display: block
+		img
+			display: block
+			margin: 0 auto
+		.mobile
+			display: none
+	footer
+		padding: 2.5em 0 10px
+		.wrapper
+			&:first-child
+				padding-bottom: 4em
+		.logo
+			margin-bottom: 2.75em
+		.footer
+			display: flex
+			justify-content: space-between
+			&-socials
+				flex-direction: column
+				align-items: flex-start
+				justify-content: space-between
+				margin: 0
+				p
+					display: block
+					margin: 0 0 10px 0
+					font-weight: 600
+				a
+					display: grid
+					grid-template-columns: 15% 80%
+					width: 100%
+			&-call-us
+				flex-direction: column
+				align-items: flex-start
+				margin: 0
+				p
+					display: block
+					margin: 0 0 10px 0
+					font-weight: 600
+				button
+					margin-top: 1em
+			&-loc-time
+				flex-direction: column
+				p
+					margin: 0 0 .5em 0
+					&:first-of-type
+						display: block
+						margin: 0 0 .5em 0
+						font-weight: 600
+					img
+						margin-right: 8px
+				.loc
+					display: flex
+					align-items: flex-start
+					img
+						transform: translateY(-8px)
+	.main-desk
+		position: relative
+		&-img
+			position: absolute
+			top: 10%
+			right: 0
+			width: 40%
+			img
+				&:first-child
+					display: none
+			.img2
+				display: inline-block
+	.arrow-up
+		right: 50px
+		width: 40px
+		height: 40px
+		border-bottom: 10px solid #264B93
+		border-right: 10px solid #264B93
+@media (min-width: 992px)
+	.our-offers
+		&__wrapper
+			.our-offers__grid
+				grid-template-columns: repeat(3,1fr)
+	.inteco
+		&-flex
+			grid-template-columns: repeat(4,1fr)
+			grid-gap: 90px
+	.header
+		header
+			.wrapper
+				padding: .875em 15px
+			button
+				border-radius: 4px
+			p
+				display: block
+				margin: 0
+				font-size: .75em
+			.logo
+				border-right: 1px solid #264B93
+				padding-right: 15px
+				height: 2.5em
+			.burger
+				display: none
+			.phone
+				span
+					display: block
+					font-size: .75em
+				a
+					font-size: 1.375em
+					line-height: 1.5em
+					margin: 0 20px
+					transform: translateX(20px)
+			.socials-and-mail
+				flex-direction: column
+				align-items: flex-start
+				img
+					margin-right: 8px
+				a
+					line-height: 1em
+				.mail
+					display: block
+					margin-bottom: 8px
+					a
+						display: flex
+		nav
+			background-color: rgba(0, 0, 0, 1)
+			ul
+				display: flex
+				li
+					border: none
+					padding: 0
+					a
+						padding: .75em 1.5em
+						font-weight: 300
+	.main-desk
+		position: relative
+		&-img
+			width: auto
+			top: 0
+			height: 100%
+			img
+				height: 100%
+			.img2
+				display: none
+			.img3
+				display: inline-block
+	.see
+		.h3
+			padding: 60px 0
+		&-grid
+			grid-template-columns: repeat(3,1fr)
+			.block-left
+				text-align: right
+				padding-right: 80px
+			.block-right
+				padding-left: 80px
+		.img-see
+			display: block
+			align-self: end
+@media (min-width: 1100px)
+	.free
+		background-color: #264B93
+		padding: 70px 0
+		.margin
+			width: 60%
+	.install
+		color: $black
+		background-color: $white
+		padding: 50px 0
+		.margin
+			width: 60%
+
+	.img-free
+		background-image: url('../img/pad.png')
+		background-repeat: no-repeat
+		background-position: 100% 0%!important
+		background-size: 580px
+	.img-install
+		background-image: url('../img/background-install.png')
+		background-repeat: no-repeat
+		background-position: 100% 0%!important
+		background-size: 680px
+@media (min-width: 1120px)
+	.for-you
+		.wrapper
+			.for-you__content
+				width: 51%
+	.img-block
+		background-image: url(../img/for-you/1-2.png)
+		background-position: right
+		background-repeat: no-repeat
+		background-size: contain
+@media (min-width: 1230px)
+	body
+		font-size: 1em
+	h1,h2,h3,.h2,.h3
+		font-size: 32px
+	.header
+		header
+			.logo
+				height: 3.625em
+				padding-right: 30px
+	.main-desk
+		padding-bottom: 160px
+@media (min-width: 1450px)
+	.img-block
+		background-image: url(../img/for-you/1.png)
+		background-position: right
+		background-repeat: no-repeat
+		background-size: contain
+// @media (min-width: 1800px)

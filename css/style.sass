@@ -1,0 +1,65 @@
+$white: #fff
+$black: #1E1111
+$red: #CB132D
+$gray: #E3E3E3
+$gray2: #636262
+$yellow: #FFC73B
+$table-color: #F4F3F3
+	
+*
+	box-sizing: border-box
+::selection
+	background: $white
+	color: $white
+body
+	font-family: 'Open Sans', sans-serif
+	font-size: calc(12px + 4 * ((100vw - 320px) / 910))
+	line-height: 1.4
+	font-weight: 400
+	min-width: 320px
+	overflow-x: hidden
+	margin: 0
+	color: $black
+
+.about
+	max-width: 700px
+	padding: 0 15px
+	width: 100%
+	margin: 150px auto 0 auto
+	&__wrapper
+		text-align: left
+		.title
+			margin: 0
+			font-size: 2.4em
+			font-weight: 700
+			.highlight-text
+				opacity: 0
+				transition: opacity 0.4s
+		.skills__list
+			margin: 0
+			margin: 4px 0
+			padding: 0
+			list-style: none
+			display: flex
+			opacity: 0.6
+			.skills__item
+				margin-right: 20px
+				&:last-child
+					margin-right: 0
+		.projects
+			margin-top: 20px
+			&__list
+				margin: 0
+				padding-left: 20px
+				.projects__link
+					color: inherit
+					transition: color 0.4s
+				.projects__link:hover
+					color: #52d7ff
+
+.about__wrapper:hover .highlight-text
+  opacity: 0.2
+
+@media (min-width: 1230px)
+	body
+		font-size: 1em

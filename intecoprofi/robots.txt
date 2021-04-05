@@ -1,0 +1,10 @@
+User-agent: Yandex
+Disallow: /js
+Disallow: /images/
+Disallow: /css
+Disallow: /cgi-bin
+Host: https://decide-group.ru/
+User-agent: Googlebot
+Disallow: /css
+Disallow: /js
+Disallow: /images/

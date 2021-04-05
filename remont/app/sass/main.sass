@@ -1,0 +1,1185 @@
+@import '../libs/normalize'
+
+$white: #fff
+$black: #1E1111
+$red: #CB132D
+$gray: #E3E3E3
+$gray2: #636262
+$yellow: #FFC73B
+$table-color: #F4F3F3
+
+*
+	box-sizing: border-box
+::selection
+	background: $white
+	color: $white
+body
+	font-family: 'Montserrat', sans-serif
+	font-size: 0.75em
+	line-height: 1.4
+	font-weight: 400
+	min-width: 320px
+	overflow-x: hidden
+	color: $black
+h1,h2,h3
+	font-size: 1.65em
+	font-weight: bold
+	color: #333333
+.h2,.h3
+	font-size: 1.65em
+	font-weight: bold
+.h2
+	margin-block-start: 0.83em
+	margin-block-end: 0.83em
+.h3
+	margin-block-start: 1em
+	margin-block-end: 1em
+.header-about
+	font-size: 1.4em
+	font-weight: bold
+	color: $white
+
+.align-center
+	text-align: center
+
+.margin-block
+	margin: 40px 0 20px 0
+
+.hidden
+	display: none !important
+
+input:active, input:focus, button:active, button:focus
+	outline: none
+
+li
+	list-style: none
+
+input
+	font-family: inherit
+
+a
+	display: block
+	text-decoration: none
+	color: inherit
+	transition: .3s
+
+button
+	cursor: pointer
+	background-color: #fff
+
+img
+	display: block
+	max-width: 100%
+
+.wrapper
+	max-width: 1230px
+	padding: 0 15px
+	width: 100%
+	margin: 0 auto
+
+/* Главная */
+.main
+	background-image: url('../img/background-main.png') !important
+	background-color: #EFF8FF
+	background-size: cover !important
+	background-position: 75% center !important
+	background-position: right center !important
+	color: $white
+	padding: 30px 0 100px 0
+	h1
+		font-size: 2em
+		font-weight: bold
+		text-align: center
+		color: $white
+	p
+		text-align: center
+	button
+		display: block
+		margin: 40px auto 0 auto
+		border: none
+		border-radius: 10px
+		padding: 20px 35px
+		font-size: 1.2em
+		font-weight: 600
+		color: $white
+		background-color: $red
+	&-merit
+		display: flex
+		justify-content: space-between
+		margin-top: 40px
+		&__block
+			display: flex
+			flex-flow: column wrap
+			justify-content: center
+			text-align: center
+			margin-right: 12px
+			width: 320px
+			padding: 10px 5px
+			background: rgba(255, 255, 255, 0.03)
+			box-shadow: inset 0px 6px 6px rgba(255, 255, 255, 0.3)
+			backdrop-filter: blur(48px)
+			border-radius: 10px
+			&:last-child
+				margin: 0
+			img
+				margin: 0 auto
+				width: calc(30px + 15 * ((100vw - 320px) / 910))
+			div
+				margin-top: 5px
+				font-weight: 600
+
+/* Калькулятор */
+.calc
+	margin-bottom: 80px
+	.background-red
+		background-color: $red
+		border-radius: 10px 11px 11px 10px
+		margin: 0 auto
+		.calc-content
+			margin: -60px 0 0 10px
+			padding: 15px 0 0 0
+			background-color: $white
+			border-radius: 10px
+			box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.07)
+			&__range
+				margin-bottom: 40px
+				padding: 0 20px
+				.header
+					font-size: 1.75em
+					font-weight: 600
+					margin-bottom: 20px
+				.range
+					position: relative
+					-webkit-appearance: none
+					width: 100%
+					height: 5px
+					background: $red
+					border-radius: 10px
+					cursor: pointer
+					&::-webkit-slider-thumb
+						-webkit-appearance: none
+						width: 20px
+						height: 20px
+						background: $red
+						border-radius: 50%
+						cursor: pointer
+				.span-number
+					position: absolute
+			&__radio
+				margin-bottom: 30px
+				padding: 0 20px
+				// width: 500px
+				.header
+					font-size: 1.75em
+					font-weight: 600
+					margin-bottom: 20px
+				.block-radio
+					display: flex
+					flex-flow: column wrap
+					font-size: 1.4em
+					.custom-radio
+						position: absolute
+						z-index: -1
+						opacity: 0
+					.custom-radio+label
+						display: inline-flex
+						align-items: center
+						user-select: none
+						cursor: pointer
+					.custom-radio+label::before
+						content: ''
+						display: inline-block
+						width: 15px
+						height: 15px
+						flex-shrink: 0
+						flex-grow: 0
+						border: 1px solid $red
+						border-radius: 50%
+						margin-right: 0.5em
+						background-repeat: no-repeat
+						background-position: center center
+						background-size: 100% 100%
+					.custom-radio:focus+label::before
+						box-shadow: 0 0 0 0.2rem #FECDCD
+					.custom-radio:checked+label::before
+						background-image: url('../img/radio.svg')
+					.custom-radio:disabled+label::before
+						background-color: #e9ecef
+			&__price
+				padding: 0 20px 15px 20px
+				border-radius: 0 0 10px 10px 
+				background-color: #F4F4F4
+				.price-header
+					font-size: 1.5em
+					margin-bottom: 15px
+				.price-flex
+					display: flex
+					flex-wrap: wrap
+					justify-content: space-between
+					p
+						margin: 0
+						font-size: 2.2em
+						font-weight: 600
+						color: $red
+					button
+						margin-top: 10px
+						border: none
+						border-radius: 10px
+						padding: 13px
+						font-size: 1.2em
+						font-weight: 600
+						color: $white
+						background-color: $red
+
+/* О нас */
+.about
+	&-header
+		text-align: center
+		&__text
+			margin: 0 auto
+	&-grid
+		display: grid
+		grid-template-columns: repeat(2,1fr)
+		margin-top: calc(25px + 30 * ((100vw - 320px) / 910))
+		&__block
+			text-align: center
+			span
+				font-size: 3.6em
+				font-weight: bold
+				color: $yellow
+			p
+				width: 70%
+				margin: 0 auto
+
+/* Наши услуги по ремонту и отделке квартир */
+.slider-services
+	.h2
+		margin-top: 80px
+		padding: 0 15px
+	.wrapper
+		padding: 0
+	.room
+		display: grid
+		grid-template-columns: repeat(1, 1fr)
+		grid-gap: 10px
+		img
+			border-radius: 10px
+		&-content
+			position: relative
+			padding: 10px
+			text-align: center
+			&__header
+				font-size: 1.4em
+				font-weight: 600
+			&__more
+				display: none
+				color: $red
+				font-weight: 500
+				margin-top: 40px
+			.block-price
+				span
+					color: $yellow
+					font-size: 1.8em
+					font-weight: 600
+			ul
+				display: none
+				padding-inline-start: 20px
+				li
+					list-style: disc
+					line-height: 2
+					&::marker
+						color: $red
+			&__price
+				display: flex
+				margin-top: 10px
+				justify-content: center
+				.price-main
+					span
+						font-size: 1.6em
+						font-weight: bold
+						color: $red
+				.price-old
+					margin: 10px 0 0 15px
+					text-decoration: line-through
+					color: $gray2
+			.room-button
+				display: block
+				margin: 20px auto 0 auto
+				border: none
+				border-radius: 10px
+				width: 100%
+				padding: 10px 25px
+				font-size: 1.2em
+				font-weight: 600
+				color: $white
+				background-color: $red
+			.button-more
+				border: 1.5px solid $red
+				background-color: transparent
+				border-radius: 10px
+				width: 100%
+				height: 50px
+				padding: 10px
+				font-size: 1.4em
+				font-weight: 600
+				color: $red
+				margin-top: 15px
+			.info
+				display: flex
+				justify-content: center
+				img
+					margin-left: 5px
+// .wrapper
+// 	display: none
+
+/* Наши преимущества */
+.our
+	text-align: center
+	.h2
+		margin: 40px 0 30px 0
+	&-grid
+		display: grid
+		grid-template-columns: repeat(2,1fr)
+		grid-gap: 20px
+		&__block
+			img
+				width: 35%
+				margin: 0 auto
+			.margin-inside
+					margin-top: 30px
+
+/* Получите скидку 10%! */
+.discount
+	color: $white
+	background-color: $red
+	margin: 40px 0
+	padding: 40px 0
+	position: relative
+	.wrapper
+		display: flex
+	&-width
+		&__header
+			font-size: 3em
+			font-weight: bold
+		input
+			margin: 0 8px 10px 0
+			padding: 15px
+			border: none
+			border-style: none
+			border-radius: 10px
+			color: #878686
+		button
+			border: none
+			border-radius: 10px
+			padding: 13px
+			font-size: 1.2em
+			font-weight: 600
+			color: $red
+	.discount-calc
+		display: none
+		position: absolute
+		top: -50px
+		right: 20px
+		width: 370px
+	.discount-detail
+		display: none
+		position: absolute
+		right: 10px
+		bottom: 0
+		width: 330px
+
+/* Наши услуги по ремонту и отделке квартир */
+.our-services
+	.h2
+		margin-bottom: 50px
+	.services-grid
+		display: grid
+		grid-template-columns: repeat(1,99%)
+		grid-gap: 20px
+		&__block
+			position: relative
+			border-radius: 10px
+			box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.07)
+			.slider2
+				&__item
+					img
+						width: 100%
+			.block-main
+				padding: 12px
+				.block-text
+					font-weight: 600
+				.block-price
+					display: flex
+					justify-content: space-between
+					p
+						margin-bottom: 0
+					.price-main
+						span
+							color: $red
+							font-size: 1.4em
+							font-weight: 600
+					.price-old
+						padding-top: 15px
+						text-decoration: line-through
+						font-size: 0.8em
+						color: #525151
+				a
+					margin-top: 16px
+					color: $gray2
+					font-size: 0.85em
+			.services-discount
+				position: absolute
+				top: 20px
+				right: 10px
+				font-weight: 600
+				padding: 2px 10px
+				border-radius: 5px
+				color: $white
+				background-color: $red
+
+/* Дизайн интерьера в подарок! */
+.design
+	background-color: $red
+	color: $white
+	padding: 40px 0
+	margin: 90px 0
+	.design-flex
+		display: flex
+		position: relative
+		justify-content: center
+		img
+			display: none
+			margin-bottom: 90px
+			position: absolute
+			width: 370px
+			top: -70px
+			left: 10px
+		.design-present
+			text-align: center
+			&__header
+				font-size: 2.4em
+				font-weight: bold
+			input
+				margin: 0 8px 10px 0
+				padding: 14px
+				border: none
+				border-style: none
+				border-radius: 10px
+				color: #878686
+			button
+				border: none
+				border-radius: 10px
+				width: 210px
+				padding: 12px
+				font-size: 1.2em
+				font-weight: 600
+				color: $red
+
+/* Услуги по ремонту квартиры под ключ */
+.service-repair
+	margin: 40px 0
+	.repair-content
+		display: flex
+		flex-wrap: wrap
+		.img-repair
+			margin: 0 auto
+			width: 100%
+			border-radius: 10px
+		&__text
+			.repair-content__img
+				display: flex
+				position: relative
+				svg
+					cursor: pointer
+					display: none
+					width: calc(50px + 45 * ((100vw - 320px) / 910))
+					margin: 20px 30px 0 0
+					color: $gray2
+					fill: currentColor
+					transition: 200ms
+					transition-timing-function: ease-in-out
+					position: relative
+					margin-right: 15%
+					&:hover
+						color: #FFC73B
+						filter: drop-shadow(-15px -15px 50px rgba(255, 199, 59, 0.4))
+					&:last-child
+						margin: 20px 0 0 0
+
+/* Часто задаваемые вопросы */
+.faq
+	.h2
+		margin-top: 60px
+	.red-block
+		background-color: $red
+		padding-left: 10px
+		border-radius: 11px
+		margin: 0 auto
+		.block__item
+			background-color: $white
+			margin: 0 0 15px 0
+			padding: 10px 20px
+			border-radius: 10px
+			box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.07)
+			.block__title
+				position: relative
+				cursor: pointer
+				user-select: none
+				padding-right: 25px
+				&::after,&::before
+					content: ''
+					width: 10px
+					height: 1px
+					background-color: $black
+					position: absolute
+					top: 7px
+					transition: all 0.3s ease 0s
+			.block__text
+				display: none
+				padding: 10px 0 0 0
+.block__title:before
+	transform: rotate(40deg)
+	right: 12px
+.block__title:after
+	transform: rotate(-40deg)
+	right: 4px
+.block__title.active:before
+	transform: rotate(-40deg)
+	right: 12px
+.block__title.active:after
+	transform: rotate(40deg)
+	right: 4px
+
+/* Отзывы наших клиентов */
+.reviews
+	margin-bottom: 90px
+	.h2
+		margin-top: 70px
+	.slider__item
+		position: relative
+		margin: 0 5px
+		.reviews-background
+			// background-color: $red
+			border-radius: 10px
+			box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.07)
+			.reviews-content
+				width: 100%
+				padding: 20px 30px
+				background-color: $white
+				margin-bottom: auto
+				&__preview
+					display: flex
+					img
+						border-radius: 5px
+					.reviews-about
+						margin-left: 10px
+						span
+							font-weight: 600
+						p
+							margin: 10px 0
+							font-size: 0.80em
+			.strip
+				position: absolute
+				width: 100%
+				height: 10px
+				background-color: $red
+				border-bottom-left-radius: 10px
+				border-bottom-right-radius: 10px
+				bottom: 0
+
+/* Виды ремонта */
+.types
+	&-grid
+		display: grid
+		grid-template-columns: repeat(1, 1fr)
+		grid-gap: calc(15px + 15 * ((100vw - 320px) / 910))
+		&__block
+			box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.07)
+			border-radius: 10px
+			.block-main
+				padding: 15px 10px
+				.block-text
+					font-weight: 600
+				.block-price
+					display: flex
+					justify-content: space-between
+					p
+						margin-bottom: 0
+					.price-main
+						span
+							font-size: 1.4em
+							font-weight: 600
+					.price-old
+						padding-top: 15px
+						text-decoration: line-through
+						font-size: 0.8em
+						color: #525151
+				a
+					margin-top: 16px
+					color: $gray2
+					font-size: 0.85em
+
+/* Ваша заявка отправлена */
+.sent
+	background-color: $red
+	margin: 40px 0
+	padding: 60px 0
+	&-flex
+		display: flex
+		position: relative
+		&__header
+			font-size: 2em
+			font-weight: bold
+			color: $white
+		img
+			display: none
+			position: absolute
+			width: 330px
+			top: -160px
+			right: 0
+
+/* Примеры наших работ */
+.examples
+	margin-bottom: 50px
+	&-grid
+		display: grid
+		grid-template-columns: repeat(1, 1fr)
+		grid-gap: 30px
+
+/* Примеры наших работ */
+.repair
+	&-wrap
+		&__block
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+			.slider4
+				width: 200px
+				.slider__item
+			.block-main
+				.block-price
+					span
+						color: $yellow
+						font-size: 1.8em
+						font-weight: 600
+				ul
+					// display: none
+					padding-inline-start: 20px
+					li
+						list-style: disc
+						line-height: 2
+						&::marker
+							color: $red
+				a
+					color: $red
+					font-weight: 500
+
+/* Ремонт новостройки под ключ */
+.build
+	&-flex
+		display: flex
+		flex-flow: column
+		img
+			margin: 0 auto
+			width: 100%
+			height: calc(200px + 200 * ((100vw - 320px) / 910))
+			object-fit: cover
+			border-radius: 10px
+
+/* Стоимость отдельных видов работ */
+.cost
+	&-grid
+		display: grid
+		grid-template-columns: repeat(1, 1fr)
+		grid-gap: 20px
+		&__block
+			display: flex
+			flex-direction: column
+			position: relative
+			padding: 20px 15px 40px 15px
+			box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.1)
+			border-radius: 10px
+			.block-header
+				font-size: 1.6em
+				font-weight: 600
+			ul
+				padding-inline-start: 20px
+				li
+					margin: 15px 0
+					list-style: disc
+					line-height: 1.5
+					&::marker
+						color: $yellow
+			.block-pay
+				position: absolute
+				color: $red
+				font-size: 1.8em
+				font-weight: bold
+				bottom: 15px
+
+/* Сантехнические работы фото */
+.foto
+	.slider5
+		padding: 0 50px
+		.slider__item
+			img
+				border-radius: 10px
+	.slidermin
+		margin: 20px 0 40px 0
+		// .slidermin__active
+		// 	position: relative
+		// 	border-radius: 10px
+		// 	.blur
+		// 		position: absolute
+		// 		top: 0
+		// 		width: 100%
+		// 		height: 100%
+		// 		background: rgba(255, 255, 255, 0)
+		.slidermin__item
+			position: relative
+			img
+				border-radius: 5px
+			.blur
+				position: absolute
+				top: 0
+				border-radius: 10px
+				padding-right: 10px
+				width: 100%
+				height: 100%
+				background: rgba(26, 26, 26, 0.7)
+		// .slidermin__active
+		// 	position: relative
+		// 	.blur
+		// 		position: absolute
+		// 		top: 0
+		// 		border-radius: 10px
+		// 		width: 96%
+		// 		height: 100%
+		// 		background: rgba(255, 255, 255, 0)
+
+.table
+	table
+		font-size: 0.8em
+		.table-pc
+			display: none
+		tr
+			.table-th
+				padding: 10px
+			.dropbtn
+				background-color: $red
+				color: white
+				// padding: 5px
+				border: none
+				cursor: pointer
+			.dropdown 
+				position: relative
+				display: inline-block
+			.dropdown-content
+				display: none
+				position: absolute
+				background-color: #f9f9f9
+				min-width: 160px
+				box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+				z-index: 1
+			.dropdown-content
+				a
+					color: black
+					padding: 12px 16px
+					text-decoration: none
+					display: block
+			.dropdown-content a:hover
+					background-color: #f1f1f1
+			.dropdown:hover .dropdown-content
+				display: block
+			th
+				font-weight: 600
+				color: $white
+				background-color: $red
+				select
+					border: none
+					border-style: none
+					color: $white
+					background-color: $red
+					&:focus
+						border: none
+					option
+			td
+				&:first-child
+					padding: 20px 10px
+				img
+					margin: 0 auto
+		.red-row
+			background-color: #F4F3F3
+
+/* Стомость дизайн интерьера в квартире ИКОНКИ */
+.icon-flex
+	display: flex
+	flex-flow: column
+	justify-content: space-between
+	margin-top: 60px
+	margin-bottom: 100px
+	&__block
+		img
+			margin: 0 auto
+		div
+			margin-top: 20px
+			font-size: 1.4em
+			text-align: center
+
+/* Актуальная смета на ремонтно-отделочные работы */
+.estimate
+	.block__item
+		background-color: $white
+		margin: 0 0 15px 0
+		// padding: 10px 20px
+		border-radius: 10px
+		box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.07)
+		.block__title
+			position: relative
+			cursor: pointer
+			user-select: none
+			padding: 20px 25px
+			border-radius: 10px
+			font-size: 1.4em
+			font-weight: 600
+			color: $white
+			background-color: $yellow
+			&::after,&::before
+				content: ''
+				width: 20px
+				height: 2px
+				background-color: $white
+				position: absolute
+				top: 50%
+				transition: all 0.3s ease 0s
+		.active
+			background-color: $red
+			transition: 0.5s
+		.block__text
+			display: none
+			.text-price
+				display: flex
+				justify-content: space-between
+				padding: 15px 5px
+				font-size: 1.15em
+				// padding: 10px 25px
+				.text
+					padding-right: 15px
+				.price
+					white-space: nowrap
+					text-align: right
+					margin: auto 0
+			.background-red
+				background-color: #F4F3F3
+				border-radius: 10px
+.block__title:before
+	transform: rotate(40deg)
+	right: 26px
+.block__title:after
+	transform: rotate(-40deg)
+	right: 12px
+.block__title.active:before
+	transform: rotate(-40deg)
+	right: 26px
+.block__title.active:after
+	transform: rotate(40deg)
+	right: 12px
+
+/* Table */
+.table
+	table
+		tr
+			th
+				padding: 10px
+				font-size: 1.2em
+				font-weight: 600
+				color: $white
+				background-color: $red
+			td
+				&:first-child
+					padding: 20px 10px
+				img
+					margin: 0 auto
+		.red-row
+			background-color: #F4F3F3
+
+/* Контакты */
+.contact
+	border-radius: 10px
+	border-left: 8px solid $red
+	padding: 20px 15px
+	h1
+		text-align: center
+		color: $red
+	.contact-preview
+		display: none
+		margin: 40px 0 20px 0
+		font-size: 1.4em
+		font-weight: 600
+	&-wrapper
+		display: flex
+		flex-flow: column-reverse
+		border-radius: 10px
+		&__form
+			margin-right: 30px
+			.preview
+				margin: 10px 0 20px 0
+				font-size: 1.4em
+				font-weight: 600
+			.form-userdata
+				display: flex
+				flex-flow: column
+				input
+					width: 100%
+					margin: 0 12px 10px 0
+					padding: 15px
+					border: 1px solid $gray
+					border-radius: 10px
+					color: #878686
+					&:last-child
+						margin: 0 0 10px 0
+			textarea
+				width: 100%
+				margin: 0 18px 10px 0
+				padding: 15px
+				outline: none
+				-moz-appearance: none
+				border: 1px solid $gray
+				border-radius: 10px
+				resize: none
+				color: #878686
+			button
+				margin: 10px 0 10px auto
+				border: none
+				border-radius: 10px
+				width: 100%
+				padding: 12px 50px
+				font-size: 1.2em
+				font-weight: 600
+				color: $white
+				background-color: $red
+		&__about
+			margin-bottom: 30px
+			.about-contacts
+				display: flex
+				margin-bottom: 20px
+				img
+					width: 15px
+					margin-right: 15px
+			.about-icon
+				display: flex
+				margin-top: 20px
+				img
+					width: 50%
+					margin-right: 8px
+
+/* Footer */
+.footer
+	background-image: url('../img/footer/background-footer.png') !important
+	background-color: #EFF8FF
+	background-size: cover !important
+	background-position: 72% !important
+	color: $white
+	padding: 30px 0 60px 0
+	.footer-grid
+		display: grid
+		grid-template-columns: repeat(1,1fr)
+		// grid-gap: 45px
+		&__block
+			margin-right: calc(20px + 16 * ((100vw - 320px) / 910))
+			&:last-child
+				margin: 0
+			.block-header
+				font-size: 1.4em
+				font-weight: 600
+				margin-bottom: 20px
+			.margin-footer
+				margin-top: 40px
+			.block-contacts
+				display: flex
+				img
+					margin-right: 12px
+				div
+					font-weight: 600
+			a
+				margin-bottom: 12px
+				&:last-child
+					margin: 0
+		.grid--1
+			img
+				width: 50%
+				margin: 0 auto
+			.grid-telephone
+				margin-top: 20px
+				text-align: center
+				font-size: 2em
+				font-weight: 600
+			.mobile-wrap
+				display: flex
+				flex-flow: column-reverse
+				justify-content: center
+				.button-another
+					display: block
+					margin: 0 auto
+					.button-red
+						border: none
+						border-radius: 10px
+						width: 100%
+						height: 50px
+						padding: 10px
+						font-size: 1.2em
+						font-weight: 600
+						background-color: $red
+						color: $white
+						margin-top: 15px
+					.button-white
+						border: 1px solid $white
+						background-color: transparent
+						border-radius: 10px
+						width: 100%
+						height: 50px
+						padding: 10px
+						font-size: 1.2em
+						font-weight: 600
+						color: $white
+						margin-top: 15px
+			ul
+				display: flex
+				justify-content: space-evenly
+				padding: 0
+				li
+					cursor: pointer
+		.mobile-footer
+			display: none
+
+/* Слайдеры */
+.slider1
+	position: relative
+	padding: 5px 0
+	button
+		outline: none
+		border: none
+		cursor: pointer
+	.slick-arrow
+		position: absolute
+		top: 50%
+		margin: -25px 0 0 0
+		// z-index: 10
+		font-size: 0
+		width: 40px
+		height: 40px
+	.slick-prev
+		left: 0
+		background: url('../img/room/arrow_l.svg') 0 0 / 100% no-repeat
+	.slick-next
+		right: 0
+		background: url('../img/room/arrow_r.svg') 0 0 / 100% no-repeat
+.slider2
+	position: relative
+	.slick-dots
+		display: flex
+		position: absolute
+		align-items: center
+		justify-content: center
+		margin: 0
+		bottom: 15px
+		left: 30%
+		li
+			list-style: none
+			margin: 0 3px
+		.slick-active
+			button
+				background-color: $white
+		button
+			padding: 0
+			font-size: 0
+			width: 10px
+			height: 10px
+			border: none
+			background-color: transparent
+			border: 1px solid #fff
+			border-radius: 50%
+.slider3
+	display: flex
+	flex-wrap: wrap
+	position: relative
+	background: linear-gradient(90deg, #FFFFFF 38.53%, rgba(255, 255, 255, 0) 132.58%)
+	.slider__item
+		display: flex
+	button
+		outline: none
+		border: none
+		cursor: pointer
+	.slick-arrow
+		position: absolute
+		font-size: 0
+		width: 40px
+		height: 40px
+	.slick-prev
+		left: 25%
+		bottom: -70px
+		background: url('../img/room/arrow_l.svg') 0 0 / 100% no-repeat
+	.slick-next
+		right: 25%
+		bottom: -70px
+		background: url('../img/room/arrow_r.svg') 0 0 / 100% no-repeat
+.slider4
+	position: relative
+	min-width: -webkit-fill-available
+	.slick-dots
+		display: flex
+		position: absolute
+		align-items: center
+		justify-content: center
+		margin: 0
+		padding: 0
+		bottom: 15px
+		left: 42%
+		li
+			list-style: none
+			margin: 0 3px
+		.slick-active
+			button
+				background-color: $white
+		button
+			padding: 0
+			font-size: 0
+			width: 10px
+			height: 10px
+			border: none
+			background-color: transparent
+			border: 1px solid #fff
+			border-radius: 50%
+.slider5
+	position: relative
+	padding: 5px 0
+	button
+		outline: none
+		border: none
+		cursor: pointer
+	.slick-arrow
+		position: absolute
+		top: 50%
+		margin: -25px 0 0 0
+		// z-index: 10
+		font-size: 0
+		width: 40px
+		height: 40px
+	.slick-prev
+		left: 0
+		background: url('../img/room/arrow_l.svg') 0 0 / 100% no-repeat
+	.slick-next
+		right: 0
+		background: url('../img/room/arrow_r.svg') 0 0 / 100% no-repeat
+.slick-disabled
+	opacity: 0.5
+.slick-track
+	display: flex
+.slick-list
+	overflow: hidden
+.slick-slide
+	padding: 0 5px
+	outline: none
+.slider-wrapper
+	margin: 0 -5px
+
+@import "media"

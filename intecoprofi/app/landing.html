@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Главная</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="header">
+	<header>
+		<div class="wrapper">
+			<a class="logo" href="/"><img src="img/logo.svg" alt="Интеко логотип"></a>
+			<p>На рынке 16 лет<br> Реализовано 3985 проектов</p>
+			<button onclick="showModal()">Оставить заявку</button>
+			<div class="socials-and-mail">
+				<div class="mail"><a href="mailto:#"><img src="img/mail.svg" alt="Почта"><span>info@mail.com</span></a></div>
+				<div class="socials">
+					<a href="//wa.me/#"><img src="img/whatsapp.svg" alt="Вотсап"><span>WhatsApp</span></a>
+					<a href="viber://chat?number=#"><img src="img/viber.svg" alt="Вайбер"><span>Viber</span></a>
+				</div>
+			</div>
+			<div class="phone">
+				<a href="tel:#">7 (499) 999-99-99</a>
+				<span onclick="showModal()">Заказать обратный звонок</span>
+			</div>
+			<div class="burger">
+				<div class="burger-line"></div>
+				<div class="burger-line"></div>
+				<div class="burger-line"></div>
+			</div>
+		</div>
+	</header>
+	<nav>
+		<div class="wrapper">
+			<ul>
+				<li><a href="/">Главная</a></li>
+				<li><a href="#standarts">Монтаж</a></li>
+				<li><a href="#see">Почему мы</a></li>
+				<li><a href="#gain">Процесс монтажа</a></li>
+				<li><a href="#inteco">Наши преимущества</a></li>
+				<li><a href="#about">О нас</a></li>
+				<li><a href="#footer">Контакты</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<div class="main-desk">
+	<div class="wrapper">
+		<div class="main-desk-text">
+			<h1><span class="first-word">Профессиональное</span><br><span class="second-word">ВИДЕОНАБЛЮДЕНИЕ</span><br>по фиксированной цене</h1>
+			<div class="main-desk-text-equipment">
+				<p>Мы используем только сертифицированное оборудование:</p>
+				<div class="images">
+					<img src="img/main-desk-imgs/ahua.svg" alt="ahua">
+					<img src="img/main-desk-imgs/hiwatch.svg" alt="HiWatch">
+					<img src="img/main-desk-imgs/rvi.svg" alt="RVi">
+					<img src="img/main-desk-imgs/hikvision.svg" alt="HIKVISION">
+					<img src="img/main-desk-imgs/trassir.svg" alt="TRASSIR">
+				</div>
+			</div>
+			<form action="php/modal.php" method="POST">
+				<input type="text" name="phone" class="phone" placeholder="Ваш телефон" required>
+				<button>Оставить заявку</button>
+			</form>
+		</div>
+		<div class="main-desk-img">
+			<img src="img/main-desk21.png" alt="Видеонаблюдение Интэко 1">
+			<img class="img2" src="img/main-desk22.png" alt="Видеонаблюдение Интэко 2">
+			<img class="img3" src="img/main-desk23.png" alt="Видеонаблюдение Интэко 3">
+		</div>
+	</div>
+</div>
+<div id="standart" class="standart img-standart">
+	<div class="wrapper">
+		<div class="h3">Наши стандарты монтажа</div>
+		<p class="standart-preview">Мы соблюдаем стандарты монтажа вне зависимости от стоимости проекта и
+			оборудования</p>
+		<div>
+			<img class="standart-pc" src="img/standart/1.svg" alt="">
+			<div class="mobile">
+				<img class="standart-mb" src="img/standart/1-2.svg" alt="">
+				<div>
+					<p><span>1</span>Камера монтируется на герметичную коммутационную коробку</p>
+					<p><span>2</span>Маркируем каждый кабель системы, заносим в кабельный журнал</p>
+					<p><span>3</span>Есть защита от скачков напряжения и автомат для защиты от коротких замыканий
+					</p>
+					<p><span>4</span>Можем покрасить видеокамеру и гофротрубы под ваш интерьер</p>
+					<p><span>5</span>Кабель укладываем в гофротрубы или гофрошланг с уплотнительными и
+						соединительными муфтами</p>
+					<p><span>6</span>Ядро системы устанавливаем в компактный запираемый ящик</p>
+					<p><span>7</span>Безопасная коммутация на клеммных колодках без скруток</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="free img-free">
+	<div class="wrapper">
+		<div class="margin">
+			<div class="h2">Установим все необходимое программное обеспечение бесплатно!</div>
+			<p>Индивидуальный подход Под ваши цели. Просто оставьте свои данные и мы расcчитаем смету для вас!</p>
+			<div class="">
+				<input type="tel" name="phone" class="phone input-all" placeholder="Ваш телефон" required>
+				<button class="buttom-all">Оставить заявку</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="see" id="see">
+	<div class="wrapper">
+		<div class="h3">С нами вы экономите до 30% бюджета<br>
+			Смотрите как!</div>
+		<div class="see-grid">
+			<div class="see-grid__block block-left">
+				<img src="img/see/1.svg" alt="">
+				<p>Профессиональное оборудование с гарантией</p>
+				<img src="img/see/2.svg" alt="">
+				<p>Доставка <span>бесплатно</span> по Москве и 15 км от МКАД</p>
+				<img src="img/see/3.svg" alt="">
+				<p>Оптимизируем монтаж под ваше свободное время</p>
+				<img src="img/see/4.svg" alt="">
+				<p>Подберем оборудование и современные решения</p>
+			</div>
+			<img src="img/see/camera.png" class="img-see" alt="">
+			<div class="see-grid__block block-right">
+				<img src="img/see/5.svg" alt="">
+				<p><span class="capitalize">Скидка 10-15%</span> от розничной цены на оборудование</p>
+				<img src="img/see/6.svg" alt="">
+				<p>Проведем <span>бесплатное</span> обучение пользования системой</p>
+				<img src="img/see/7.svg" alt="">
+				<p>Проведем <span>бесплатно</span> уборку после монтажа</p>
+				<img src="img/see/8.svg" alt="">
+				<p>Гарантийные вызовы осуществим <span>бесплатно</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="install" class="install img-install">
+	<div class="wrapper">
+		<div class="margin">
+			<div class="h2">Необходим монтаж видеокамеры? Наш специалист сделает установку!</div>
+			<p>Получите консультацию по системе видеонаблдения под вашу ситуацию</p>
+			<div class="">
+				<input type="tel" name="phone" class="phone input-all" placeholder="Ваш телефон" required>
+				<button class="buttom-all">Оставить заявку</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="gain" id="gain">
+	<div class="wrapper">
+		<div class="h3">Посмотрите как проходит работа по усилению Вашей безопасности</div>
+		<p class="gain-preview">Всего 6 простых шагов к вашей безопасности и спокойствию</p>
+		<div class="gain-grid">
+			<div class="gain-grid__block gain-grid--1">
+				<div class="header-block">1. Заявка на сайте</div>
+				<p>Вы оставляете заявку на установку</p>
+				<button class="buttom-all">Оставить заявку</button>
+			</div>
+			<div class="gain-grid__block gain-grid--2">
+				<div class="header-block">2. Выезд инженера бесплатно</div>
+				<p>Наш инженер выезжает на объект для оценки и консультации</p>
+			</div>
+			<div class="gain-grid__block  gain-grid--3">
+				<div class="header-block">3. Подбор системы</div>
+				<p>Подбор системы видеонаблюдения индивидуально под ваш объект</p>
+			</div>
+			<div class="gain-grid__block  gain-grid--4">
+				<div class="header-block">4. договор и смета</div>
+				<p>Согласование сметы, подписание договора и начало работ</p>
+			</div>
+			<div class="gain-grid__block  gain-grid--5">
+				<div class="header-block">5. монтаж</div>
+				<p>Монтаж оборудования и ввод в эксплуатацию</p>
+			</div>
+			<div class="gain-grid__block  gain-grid--6">
+				<div class="header-block">6. прием работ</div>
+				<p>Обучение использованию системы и дальнейшее обслуживание</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="inteco" id="inteco">
+	<div class="wrapper">
+		<div class="h3">ИНТЭКОПРОФИ - лучшие условия для сотрудничества</div>
+		<div class="inteco-flex">
+			<div class="inteco-flex__block">
+				<div class="block-inteco">
+					<img src="img/inteco/1.svg" alt="">
+				</div>
+				<span>24 месяца</span>
+				<p>Мы уверены в качестве нашего оборудования и даем долгосрочную гарантию</p>
+			</div>
+			<div class="inteco-flex__block">
+				<div class="block-inteco">
+					<img src="img/inteco/2.svg" alt="">
+				</div>
+				<span>Быстрые сроки</span>
+				<p>Сроки монтажа от 1 дня. Каждый этап соответствует стандарту ISO 9001</p>
+			</div>
+			<div class="inteco-flex__block">
+				<div class="block-inteco">
+					<img src="img/inteco/3.svg" alt="">
+				</div>
+				<span>16 лет</span>
+				<p>С 2004 года устанавливаем системы безопасности</p>
+			</div>
+			<div class="inteco-flex__block">
+				<div class="block-inteco">
+					<img src="img/inteco/4.svg" alt="">
+				</div>
+				<span>Доставка</span>
+				<p>Мы выполняем доставку оборудования по Москве и МО бесплатно</p>
+			</div>
+		</div>
+		<div class="inteco-bottom">
+			<input type="tel" name="phone" class="phone input-all" placeholder="Ваш телефон" required>
+			<button class="buttom-all">Начать сотрудничать</button>
+		</div>
+	</div>
+</div>
+
+<div class="about" id="about">
+	<div class="wrapper">
+		<div class="h3">О компании</div>
+		<div class="inteco-flex">
+			<div class="inteco-flex__block">
+				<div class="block-inteco">
+					<img src="img/about/1.svg" alt="">
+				</div>
+				<span>20 000</span>
+				<p>видеокамер наблюдения</p>
+			</div>
+			<div class="inteco-flex__block">
+				<div class="block-inteco">
+					<img src="img/about/2.svg" alt="">
+				</div>
+				<span>10 000</span>
+				<p>систем доступа</p>
+			</div>
+			<div class="inteco-flex__block">
+				<div class="block-inteco">
+					<img src="img/about/3.svg" alt="">
+				</div>
+				<span>800 000</span>
+				<p>киллометров кабеля</p>
+			</div>
+			<div class="inteco-flex__block">
+				<div class="block-inteco">
+					<img src="img/about/4.svg" alt="">
+				</div>
+				<span>300</span>
+				<p>офисных зданий</p>
+			</div>
+		</div>
+		<p>За 16 лет работы мы смонтировали более 20 000 видеокамер, оснастили системой доступа более 10 000 проходов, проложили более 800 000 км кабеля, оснастили «под ключ» более 300 офисных зданий и бизнес центров.
+		</p>
+		<p>Мы успешно работаем в сфере установки систем безопасности с апреля 2004 года. За это время мы расширили географию своих работ от Калининграда до Камчатки.
+		</p>
+		<p>У нас есть все необходимые сертификаты и лицензии для проведения работ в сфере безопасности. Также наши сотрудники имеют все необходимые разрешительные документы и сертификаты ведущих производителей для проведения работ.</p>
+		<div class="h3 margin-about">Нам доверяют</div>
+		<p>Мы стремимся к удовлетворению всех потребностей клиента и повышаем качество наших услуг. 
+			Мы ценим всех наших клиентов, от небольших фирм до крупных корпораций.</p>
+		<div class="slider1">
+			<div class="slider__item">
+				<img src="img/reviews/1.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/2.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/3.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/4.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/5.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/6.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/7.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/8.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/9.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/10.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/11.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/12.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/13.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/14.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/15.png" alt="">
+			</div>
+			<div class="slider__item">
+				<img src="img/reviews/16.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<footer id="footer">
+	<div class="wrapper">
+		<div class="logo"><a href="/"><img src="img/logo.svg" alt="Интеко лого"></a></div>
+		<div class="footer">
+			<div class="footer-socials">
+				<p>Как с нами связаться?</p>
+				<a href="mailto:#"><img src="img/mail.svg" alt="email"><span>info@mail.com</span></a>
+				<a href="//wa.me/#"><img src="img/whatsapp.svg" alt="whatsapp"><span>WhatsApp</span></a>
+				<a href="viber://chat?number=#"><img src="img/viber.svg" alt="viber"><span>Viber</span></a>
+			</div>
+			<div class="footer-call-us">
+				<p>Есть вопросы? Звоните!</p>
+				<a href="tel:#">7 (499) 999-99-99</a>
+				<button onclick="showModal()">Обратный звонок</button>
+			</div>
+			<div class="footer-loc-time">
+				<p>Как к нам добраться?</p>
+				<p class="loc">
+					<img src="img/loc.svg" alt="location">
+					<span>Lorem ipsum dolor sit amet.</span>
+				</p>
+				<p class="time">
+					<img src="img/time.svg" alt="time">
+					с 9:00 до 22:00
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<p>© 2010 – 2021. intekoprofi.ru Cайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой.</p>
+		<p>Политика конфиденциальности</p>
+	</div>
+</footer>
+<div class="modal hidden">
+		<form action="php/modal.php" method="POST">
+			<input type="text" name="phone" class="phone" placeholder="Ваш телефон" required>
+			<button>Оставить заявку</button>
+		</form>
+</div>
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/common.min.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,97 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #fff;
+  color: #fff;
+}
+
+::selection {
+  background: #fff;
+  color: #fff;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: calc(12px + 4 * ((100vw - 320px) / 910));
+  line-height: 1.4;
+  font-weight: 400;
+  min-width: 320px;
+  overflow-x: hidden;
+  margin: 0;
+  color: #1E1111;
+}
+
+.about {
+  max-width: 700px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 150px auto 0 auto;
+}
+
+.about__wrapper {
+  text-align: left;
+}
+
+.about__wrapper .title {
+  margin: 0;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+.about__wrapper .title .highlight-text {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.about__wrapper .skills__list {
+  margin: 0;
+  margin: 4px 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0.6;
+}
+
+.about__wrapper .skills__list .skills__item {
+  margin-right: 20px;
+}
+
+.about__wrapper .skills__list .skills__item:last-child {
+  margin-right: 0;
+}
+
+.about__wrapper .projects {
+  margin-top: 20px;
+}
+
+.about__wrapper .projects__list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.about__wrapper .projects__list .projects__link {
+  color: inherit;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.about__wrapper .projects__list .projects__link:hover {
+  color: #52d7ff;
+}
+
+.about__wrapper:hover .highlight-text {
+  opacity: 0.2;
+}
+
+@media (min-width: 1230px) {
+  body {
+    font-size: 1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
